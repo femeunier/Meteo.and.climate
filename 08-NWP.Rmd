@@ -72,7 +72,7 @@ The physical processes associated with the radiative transfer, turbulent mixing,
 Parametrization schemes are then necessary to adequately describe the impact of these subgrid-scale mechanisms on the large-scale flow of the atmosphere. In other words, the ensemble effect of the subgrid-scale processes has to be formulated in terms of the resolved grid-scale variables. **Parameterization is a method of replacing processes that are too small-scale or complex to be physically represented in the model by a simplified process**. For example, sometimes, we use prescribed values based on some climatology, or we use a simplified version of the process.
 
 
-```{r PhysicalParameterizations, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r PhysicalParameterizations, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure72.png')
 ```
 
@@ -87,14 +87,14 @@ One critical step on weather forecasting is data assimilation. Data assimilation
 The weather forecasts produced by operational centers use data assimilation to estimate initial conditions for the forecast model from observations. The quality of forecasts depends on how well we use the information received in real-time from the global observing system.
 The purpose of data assimilation is to determine the best possible atmospheric state using observations and short-range forecasts. Data assimilation is typically a **sequential time-stepping procedure**, in which a previous model forecast is compared with newly received observations, the model state is then updated to reflect the observations, a new forecast is initiated, and so on. The update step in this process is usually referred to as the analysis; the short model forecast used to produce the analysis is called the background; we will see this later.
 
-```{r DataAssimilation, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r DataAssimilation, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure73.jpg')
 ```
 
     • The data assimilation process
 Here we have described the data assimilation process:
 
-```{r DataAssimilation 2, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r DataAssimilation2, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure74.png')
 ```
 
@@ -109,22 +109,22 @@ The forecast model is a crucial component in modern data assimilation algorithms
     • 4D-Var data assimilation method
 ECMWF uses a 4D-Var data assimilation method. Around 25 million observations within 12 hours are used simultaneously in one global (iterative) estimation problem. A first guess forecast is run at high resolution (9 km) from the background state at the start of the assimilation window. During this forecast, model equivalents of the observations are computed. 4D-Var adjusts the 12-hour forecast to find the best compromise between the information from the background.
 
-```{r DataAssimilation3, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r DataAssimilation3, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure75.png')
 ```
 
-```{r DataAssimilation4, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r DataAssimilation4, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure76.png')
 ```
 
 ### Sources of model error
-    • Computer models have inherent flaws that limit the accuracy of weather forecasts (each model makes certain assumptions about the atmosphere).
-    • Majority of models are not global in their coverage (errors along the model's boundaries).
-    • Regions where observations are sparse.
-    • Grid Spacing (resolution) – Parametrization.
-    • Many models cannot adequately interpret many of the factors that influence surface weather.
-    • Chaos, limit model accuracy.
-    • Uncertainties in the data.
+    1. Computer models have inherent flaws that limit the accuracy of weather forecasts (each model makes certain assumptions about the atmosphere).
+    2. Majority of models are not global in their coverage (errors along the model's boundaries).
+    3. Regions where observations are sparse.
+    4. Grid Spacing (resolution) – Parametrization.
+    5. Many models cannot adequately interpret many of the factors that influence surface weather.
+    6. Chaos, limit model accuracy.
+    7. Uncertainties in the data.
 
 ### Ensemble Forecasting
 
@@ -136,7 +136,7 @@ As the atmosphere is a chaotic system, minimal errors in its initial state can l
 Instead of running just a single forecast, the computer model is run a number of times from slightly different starting conditions. The complete set of forecasts is referred to as the **ensemble** and individual forecasts within it as **ensemble members**.
 Ensemble forecast systems are designed so that each member should be equally likely. The initial differences between the ensemble members are small and consistent with uncertainties in the observations. But when we look several days ahead the forecasts can be quite different.
 
-```{r EnsembleForecasting, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r EnsembleForecasting, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure77.png')
 ```
 
@@ -146,12 +146,12 @@ Here we have a schematic representation of an ensemble forecast: an ensemble sam
 As the forecast goes further and further into the future, the lines look more and more like scrambled spaghetti, which is why an ensemble forecast chart such as this one is often referred to as a **spaghetti plot**. We can assume that the less agreement among the model runs, the less predictable is the weather.
 
 ### Other Methods of Weather Forecasting
-    • **Persistence Forecast:** 'tomorrow we'll have the same weather as today', which is often quite a good guess for regions with synoptic weather variations. 
-    • **Steady-state or Trend Forecast:** surface weather systems move in the same direction and at the same speed as they have been moving.
-    • **Analog Method:** e.g. the weather will be analogue to other days when the same situation occurred, like the passing of a cold front.
-    • **Statistical Forecasts:** using statistical models, based on climatology.
-    • **Weather Type Forecasting:** by categorizing weather patterns, uses analog method.
-    • **Climatological forecast:** based on climatology of an area.
+    1. **Persistence Forecast:** 'tomorrow we'll have the same weather as today', which is often quite a good guess for regions with synoptic weather variations. 
+    2. **Steady-state or Trend Forecast:** surface weather systems move in the same direction and at the same speed as they have been moving.
+    3. **Analog Method:** e.g. the weather will be analogue to other days when the same situation occurred, like the passing of a cold front.
+    4. **Statistical Forecasts:** using statistical models, based on climatology.
+    5. **Weather Type Forecasting:** by categorizing weather patterns, uses analog method.
+    6. **Climatological forecast:** based on climatology of an area.
 
 ### The time range of Forecasts
 
@@ -164,7 +164,7 @@ Beyond 8/10 days we enter in the **long-range forecast**. Here we have several c
 
 ### What is a climate model?
 
-```{r Whatisaclimate model, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r Whatisaclimatemodel, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure78.png')
 ```
 
@@ -190,7 +190,7 @@ An Energy Balance Model does not attempt to resolve the dynamics of the climate 
 
     • Zero Dimensional EBM
     
-```{r EnergyBalanceModels, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r EnergyBalanceModels, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure79.png')
 ```
 
@@ -198,7 +198,7 @@ The Zero Dimensional EBM—the simplest model that can be invoked to explain, fo
 
     • Gray Body Variant
     
-```{r EnergyBalanceModels2, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r EnergyBalanceModels2, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure710.png')
 ```
 
@@ -215,7 +215,7 @@ On the other hand, some EMICs include components that are very similar to those 
 GCMs attempt to describe the full 3D geometry of the atmosphere and other components of Earth's climate system. Atmospheric GCMs numerically solve the equations of physics (e.g., dynamics, thermodynamics, radiative transfer, etc.) and chemistry applied to the atmosphere and its constituent components, including the greenhouse gases.
 Current generation climate models typically include an ocean that plays a far more active role in the climate system. The major current systems are modeled, as is their direct role in transporting heat poleward. When the dynamics of the ocean and its interactions with the atmosphere are explicitly resolved by a climate model, the model is referred to as Atmosphere-Ocean GCM, or AOGCM, or sometimes merely a coupled model.
 
-```{r GeneralCirculationModels, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r GeneralCirculationModels, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure711.png')
 ```
 
@@ -225,7 +225,7 @@ knitr::include_graphics('figures/Figure711.png')
 Earth system models (ESM) seek to simulate all relevant aspects of the Earth system. They include physical, chemical and biological processes, therefore reaching far beyond their predecessors, the global climate models (GCM), which just represented the physical atmospheric and oceanic processes.
 The climate system is driven by more than the physical processes that have conventionally been modelled (such as winds, clouds, land surface, oceans and ice). The concentration of greenhouse gases and aerosols are not only affected by human-made emissions, as these are involved in physical reactions and interactions with the biological components of the Earth system, strongly linked to the climate system.
 
-```{r Earthsystemmodels, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r Earthsystemmodels, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure712.png')
 ```
 
@@ -234,7 +234,7 @@ Here we have the basic structure of an Earth System Model: blue boxes represent 
 At their core ESMs have the atmospheric and ocean components of a GCM however to this they add representations of the global carbon cycle, dynamic vegetation, atmospheric chemistry, ocean bio-geo-chemistry and even continental ice sheets.
 	
 
-```{r Earthsystemmodels2, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r Earthsystemmodels2, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure713.png')
 ```	
 
@@ -243,7 +243,7 @@ The earth system models gain complexity by considering the biological and chemic
 ESMs are composed by a set of equations describing atmospheric and oceanic circulation and thermodynamics, but also the biological and chemical processes that feedback on to the physics of climate; all solved for several locations in space that form a three-dimensional grid over the surface of the Earth and underneath the surface of the oceans Merging all climate-relevant aspects together in a single model is computationally very demanding and time-consuming.
 
 
-```{r Earthsystemmodels3, fig.cap='XX)', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
+```{r Earthsystemmodels3, fig.cap='XX', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE, fig.show='hold'}
 knitr::include_graphics('figures/Figure714.png')
 ```	
 

@@ -46,16 +46,16 @@ knitr::include_graphics('figures/FigureE3.png')
 Another type of thunderstorm associated with the most severe weather is the multicell thunderstorms. They are characterized by several updrafts and downdrafts close to one another. They occur in clusters of cells in various stages of development, moving together as a group.
 Because these storms developed in areas with strong wind shear, the updraft tend to ride up over downdraft movements. Precipitation inside the storm does not fall into the updraft so the storm’s fuel supply is maintained and the storm complex can survive for a long time. 
 
-    * **Downdrafts and Gust Fronts**
+    **Downdrafts and Gust Fronts**
 Originate at altitudes where the air temperature is colder than at ground level, and they are kept cold even as they sink to warmer levels by the evaporation of water and melting of ice particles. Not only is the sinking air denser than its surroundings, but it carries a horizontal momentum that is different from the surrounding air. When such air hits the ground, it usually moves outward ahead of the storm at a higher speed than the storm itself. This is why an observer on the ground watching a thunderstorm approach can often feel a gust of cold air before the storm passes overhead. The passage of such a gust front is easily recognized as the wind speed increases, and the air temperature suddenly drops.
 
-    * **Downbursts**
+    **Downbursts**
 Beneath an intense thunderstorm, the downdraft can become localized so that it hits the ground and spreads horizontally in a radial burst of wind, much like water pouring from a tap and striking the sink below. Such downdrafts are called downbursts.
 
-    * **Mesoscale Convective System (MCS)**
+    **Mesoscale Convective System (MCS)**
 Sometimes a collection of thunderstorms reunited together and act as a system – we call this Mesoscale Convective System, because of their size and duration who last more than 12 hours. Here in this radar measurements (slide 14), we have Mesoscale convective complex where storms organize into a large, circular convective weather system. MCV are thunderstorms organized into a region cyclonic rotation.
 
-    * **Squall-Line Thunderstorms**
+    **Squall-Line Thunderstorms**
 A squall-line is also a Mesoscale Convective System organized as a line of thunderstorms. A squall is a violent burst of wind normally associated with significant thunder, hail and rain. It lasts for at least one minute. Wind gust: wind strength increases for a few seconds. A squall is caused by updrafts that produce storm clouds and downdrafts that hit the ground and quickly move ahead from the storm (similar as gust fronts), the warm air before this front is forced upwards and is feeding the storm, so it is self-sustaining. A squall-line is a stretch of violent winds that rises en masse, normally developing ahead of, or along a cold front. It is 100 km long and the structure last for several hours.
 
 #### Supercell thunderstorms
@@ -175,12 +175,12 @@ knitr::include_graphics('figures/FigureE12.png')
 ### Life of a tropical cyclone
 
 #### The “right ingredients”
-    * The temperature of the surface layer of ocean water must be 26.5 °C or warmer, and this warm layer must be at least 20/50 m deep. 
-    * A preexisting atmospheric circulation must be located near the surface.
-    * The atmosphere must cool quickly enough with height to support the formation of deep convective clouds (instability).
-    * The middle atmosphere must be relatively humid at the height of about 5,000 m above the surface.
-    * The developing system must be at least 500 km away from the Equator.
-    * The wind speed must change slowly with height through the troposphere.
+    1. The temperature of the surface layer of ocean water must be 26.5 °C or warmer, and this warm layer must be at least 20/50 m deep. 
+    2. A preexisting atmospheric circulation must be located near the surface.
+    3. The atmosphere must cool quickly enough with height to support the formation of deep convective clouds (instability).
+    4. The middle atmosphere must be relatively humid at the height of about 5,000 m above the surface.
+    5. The developing system must be at least 500 km away from the Equator.
+    6. The wind speed must change slowly with height through the troposphere.
 
 #### The developing storm
 
