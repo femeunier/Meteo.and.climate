@@ -1,77 +1,349 @@
 # Atmospheric stability, cloud development, precipitation
 \chaptermark{Atm}
 
+Stability is the basis for understanding cloud formation (and many other meteorological processes). 
 
-<!-- ```{r,echo=FALSE,message=FALSE,warning=FALSE} -->
-<!-- knitr::kable(mtcars[1:6, 1:6], caption = 'Example of table directly from R',format = c("pandoc")) -->
-<!-- ``` -->
+## Stable, unstable and neutral atmospheric conditions
 
-<!-- Lorem ipsum dolor sit amet, fermentum ornare morbi sociosqu dictumst. In malesuada nulla aliquam id tellus ridiculus eu. Ac id ridiculus nec commodo in feugiat in. Parturient amet eget suspendisse diam non platea justo. Elementum ac lacus cubilia nulla vestibulum eu, egestas. Nec non urna mi et, malesuada enim. Vitae at amet varius erat. Aenean nunc commodo sodales accumsan, nec dui posuere nec elit, etiam. Maximus faucibus magnis penatibus euismod vestibulum, tempor turpis. Ac, tincidunt potenti felis enim morbi blandit, accumsan bibendum vitae nulla senectus dictum. Ac ac sagittis ut in quam nec gravida etiam a conubia ex. -->
+Stable, unstable or neutral conditions exist in the atmosphere which are determined by the temperature trend with altitude. 
 
-<!-- Ut non, venenatis in, scelerisque in sed, interdum ipsum. Non imperdiet, sagittis, erat tempor. Pretium ligula, augue curabitur mi luctus nam auctor fames? Tellus tristique rutrum integer fermentum dapibus, vehicula nascetur. Ante fringilla orci, nostra maximus tempus! Donec non ligula in eu sociis sed tincidunt purus nunc. Orci nam conubia dis orci lacus. In aenean leo quis enim convallis, sagittis massa. Odio varius duis nec diam quam quis in condimentum et. Amet id, interdum vestibulum et diam quam litora eget vitae eget pharetra. Maecenas eget, donec pretium sit in condimentum ut lobortis, eu. Non, eget sed. Cras laoreet ut et a, maecenas magna inceptos malesuada. -->
+### Stable & unstable equilibria
 
-<!-- At odio phasellus. Vel, sagittis dictumst cum litora rhoncus. Elementum suspendisse. Metus porttitor netus interdum tristique ornare augue. Faucibus nibh amet, imperdiet commodo nisl consectetur semper. Suscipit lacus, ut iaculis nibh, et sit. Sapien lorem dolor interdum in dictum. Faucibus, eleifend quis, dapibus sed. Nam purus porttitor nulla facilisis varius amet in in blandit.                -->
+A **stable equilibrium** (situation A on the figure) would be when the rock is in a valley and when you move the rock up the hill, it rolls back to where it first was, downhill. Therefore, in a stable equilibrium when you deviate from the equilibrium you eventually always come back to the initial situation. 
+An **unstable equilibrium** (situation B on the figure) would be when the rock is on top of the mountain and when you move it downhill, it keeps rolling away further away from its original state. A such, in an unstable equilibrium when you deviate from the equilibrium it goes further away from it without having to exert any additional force. In the atmosphere we see something similar with air bubbles which tend to return to their initial situation or tend to rise and keep rising. This equilibrium depends on the temperature variation with altitude. 
 
+```{r Stable, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure31.png'))
+```
 
-<!-- ```{r,echo=FALSE,message=FALSE,warning=FALSE} -->
+### Dry and moist adiabatic rate
 
-<!-- library(dplyr) -->
-<!-- library(kableExtra) -->
-<!-- text_tbl <- data.frame( -->
-<!--   "Type of model" = c("Biogeochemical", "Forst gap models", "Ecosystem demography"), -->
-<!--   "Description" = c("Ecosystem models with emphasis","Individual trees","As in gap models"), -->
-<!--   "Example" = c("TEM, CASA","FORET","ED")) -->
+To further understand atmospheric stability we need two quantities, the dry and the moist adiabatic rate. An **adiabatic process** is a process where we assume there is no mass or energy exchange with the surroundings (so here no exchange between an air bubble and its surroundings). The **dry adiabatic lapse rate** ($\Gamma_{dry}$) applies to dry air (unsaturated air). If we bring a volume of air (“air in balloon”) manually higher in the air, the volume of the balloon will increase (because the air pressure decreases). When adiabatic expansion happens, the temperature of the parcel of air will decrease (ideal gas law). For dry air the temperature will decrease with a constant speed of **10°C per km** ($\Gamma_{dry}$). For example, a parcel of air with a temperature of 30°C at the surface will expand and cool down till 20°C when brought up to 1 km above the surface. This is a reversible process because we assume there is no energy and mass exchange with the surroundings. So, if we bring this volume of air back to the surface, the volume will shrink and the temperature will increase again with the dry adiabatic lapse rate. 
 
-<!-- knitr::kable(text_tbl, caption = 'Example of table from Bonan',format = "markdown") -->
-<!-- ``` -->
+When we have a volume of moist air (RH=100%), and do the same thing under the same assumptions, the temperature of the air parcel will also decrease when it is rising but it will decrease slower. The temperature will decrease according to the **moist adiabatic lapse rate** ($\Gamma_{moist}$), which is **6°C per km** on average. The temperature decrease is slower because when the air parcel of already saturated air rises and cools down, **condensation** happens which releases heat (and thus compensates part of the temperature decrease). Assuming that we are dealing again with a reversible adiabatic process, the reversed situation can also happen. Then the parcel of moist air and water droplets descends, the temperature increases and the water droplets evaporate, taking up energy and slowing down the temperature increase. When the air in general is warmer, the moist adiabatic rate will be even smaller than 6°C per km because warm air can hold more moisture and thus compensates more through condensation heat which is released. In reality there is exchange of mass and energy (e.g. water droplets would fall from the air parcel) but the theory does allow us to describe stability in the atmosphere based on the temperature profile of the atmosphere.
 
+```{r Expand, fig.cap='Caption', out.width='60%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure32.png'))
+```
 
-<!-- ```{r <nice2>, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Here is a second figure! It was generated in R', out.width='80%',echo=FALSE,message=FALSE,warning = FALSE} -->
-<!-- library(ggplot2) -->
-<!-- ggplot(midwest, aes(x=area, y=poptotal)) +  -->
-<!--   geom_point(aes(col=state, size=popdensity)) +  -->
-<!--   geom_smooth(method="loess", se=F) +  -->
-<!--   xlim(c(0, 0.1)) +  -->
-<!--   ylim(c(0, 500000)) +  -->
-<!--   labs(subtitle="Area Vs Population",  -->
-<!--        y="Population",  -->
-<!--        x="Area",  -->
-<!--        title="Scatterplot",  -->
-<!--        caption = "Source: midwest") + -->
-<!--   theme_bw() -->
+### Stable atmosphere
 
-<!-- ``` -->
+The stability of air is determined by the **environmental lapse rate** (the real temperature pattern of the environment, what you would measure with a weather balloon). When the environmental lapse rate lies at the right side of the dry and moist adiabatic lapse rate the atmosphere is stable. In this situation, if we bring up a parcel of dry or moist air, the parcel of air will have a lower temperature than its environment at every height. This also means that the air parcel is heavier than the surrounding air, so the parcel will sink back to it’s equilibrium. Therefore a stable atmosphere is a layer of air with a low lapse rate (where the temperature declines slowly with height) causing air parcels to stay where they are. In stable atmosphere’s there is thus practically no turbulence.
+
+```{r Turbulence, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure33.png'))
+```
+
+Example of stable air are situations where it is foggy, calm weather with stratus clouds (because clouds don’t mix with higher air layers and thus stay in the same horizontal plane). An extreme situation of stable air is a **temperature inversion** (temperature increases with height) such as in the stratosphere. This is also the case when fog forms at night, when radiational cooling causes low temperatures (cold heavy air) at the surface and higher temperatures (warm lighter air) above the surface and therefore there is no mixing of the layers (no turbulence). Besides night-time radiational cooling this situation is also caused by cold advection. A stable atmosphere can also be recognized at the straight horizontal plume (fanning plume) of smoke coming from a chimney.
 
 
-<!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway. -->
+```{r chimney, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure34.png'))
+```
 
-<!-- Figures and tables with captions will be placed in `figure` and `table` environments, respectively. -->
+```{r Fanning, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure35.png'))
+```
 
-<!-- ```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'} -->
-<!-- par(mar = c(4, 4, .1, .1)) -->
-<!-- plot(pressure, type = 'b', pch = 19) -->
-<!-- ``` -->
+In a high-pressure zone, where air layers are sinking, stability and even a temperature inversion can arise which is then called a **subsidence inversion**. An air layer (xy) that is sinking will warm at the dry adiabatic rate. This warming is caused by the compression of the layer as the air pressure increases when the layer sinks closer to the earth surface. This compression results in a smaller resulting layer depth (x’y’). So, the top of the layer (y) will travel a longer distance due to the compression of the layer and thus will warm up more. Due to that, the temperature profile within the layer will invert and result in a subsidence inversion. The stable layer will not necessarily sink to the earth surface.
 
-<!-- ```{r nice-fig2, fig.cap='Here is a second figure!', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE} -->
-<!-- knitr::include_graphics('figures/Figure_course.png') -->
-<!-- ``` -->
-
-
-<!-- $$\begin{array}{ccc} -->
-<!-- x_{11} & x_{12} & x_{13}\\ -->
-<!-- x_{21} & x_{22} & x_{23} -->
-<!-- \end{array}$$ -->
+```{r adiabatic, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure36.png'))
+```
 
 
-<!-- Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab). -->
+### Neutral atmosphere
 
-<!-- ```{r nice-tab, tidy=FALSE,echo=FALSE} -->
-<!-- knitr::kable( -->
-<!--   head(iris, 20), caption = 'Here is a nice table!', -->
-<!--   booktabs = FALSE, format = c("pandoc") -->
-<!-- ) -->
-<!-- ``` -->
-<!-- You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015]. -->
-<!-- $$ -->
-<!--   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k} -->
-<!-- $$ -->
+Neutral atmospheric conditions occur when the environmental lapse rate equals the dry or wet adiabatic lapse rate. In such conditions an air parcel does not have the tendency to rise neither to sink. The air parcels will stay where they are pushed towards because they have the same temperature as the surrounding air. You can compare it with a rock (see 3.1.1) on a flat surface. In neutral conditions we can observe ‘coning’ smoke plumes. Neutral conditions are exceptional and occur around sunrise and sunset when net radiation is zero. Neutral condition are often assumed in mathematical (weather/atmospheric) models, because in such conditions wind profiles are have a logarithmic shape. 
+
+```{r Dadiabatic, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure37.png'))
+```
+
+```{r coning, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure38.png'))
+```
+
+### Unstable atmosphere
+
+Unstable conditions occur when rising air parcels cool down slower than the surrounding air. The environmental lapse rate is in that case steeper then the moist and dry adiabatic lapse rate. These **absolutely unstable conditions** are rare. However, they typically form during the day when the environmental lapse rate steepens due to heating of the earth surface. If the lapse rate is higher than 3.4°C per 100 m (autoconvective lapse rate) we speak of spontaneous convection. In this case there is a spontaneous rising of air bubbles, comparable to a “boiling atmosphere”, which can happen during forest fires.
+
+```{r heli, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure39.png'))
+```
+
+**Conditionally unstable conditions** occur when the environmental lapse rate is in between the dry and the wet adiabatic lapse rate. Here, saturated air parcels will rise, but dry air parcels will sink. This situation is a lot more common than absolutely stable conditions. Under the same temperature conditions the wet air above a forest will be unstable while the dry air above a city will be stable.
+
+```{r heli2, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure310.png'))
+```
+
+Unstable conditions are characterised by windy, noisy conditions with a higher chance on the formation of cumulus clouds. In unstable conditions we can see looping plumes. Unstable conditions can arise due to surface warming. Surface warming happens during the day due to solar heating of the surface but can also be the result of warm advection and air moving over a warm surface (ocean air moving over warm land). Unstable conditions can also arise due to the cooling of the air aloft. This can be the result of cold advection or radiational cooling of clouds.
+
+```{r Looping, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure311.png'))
+```
+
+### Summary
+
+All the atmospheric conditions are summarised quite nicely in the figure below. When the environmental lapse rate lies in the blue area, the atmosphere is absolutely stable. When it lies in the green area the atmosphere is conditionally unstable. When the environmental lapse rate is in the red area the atmosphere is absolutely unstable. However, the average lapse rate of the lower troposphere is 6.5 °C per km. Therefore, commonly we have conditionally unstable conditions (green zone). 
+
+```{r Sumup, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure312.png'))
+```
+
+
+### Impact of mixing
+
+Stability is determined by the warming and the cooling of the surface, advection, etc. But it also other elements play a role, such as mixing. Temperature profiles are influenced by turbulence (see chapter 2) and therefore, stability is influenced by it as well. Via turbulence warm air (compression) is moving to the surface and cold air (expanding) is moving upward. As such the environmental lapse rate becomes steeper.
+
+```{r Mixing, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure313.png'))
+```
+
+### Lifting and convective instability
+
+There is another specific situation which can induce instability and is called **lifting instability**. Similar to the situation where stability can be created by sinking layers in a high-pressure zone, in low pressure zones (L) instability can be created in rising air layers. A rising air layer will cool down, but the air layer is also becoming thicker due to decompression. As such, the top of the layer (x) is travelling a longer distance and can cool down more. The result is an unstable layer with a steeper lapse rate than the layer had in its original position.
+
+```{r Lifting, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure314.png'))
+```
+
+In case of a “mixed” air layer with a saturated bottom and a unsaturated bottom, the result is even extremer because the top is following the dry lapse rate and the bottom is following the moist lapse rate. The top will not only travel a longer distance due to decompression but it also cools down faster than the bottom layer which follows the moist adiabatic rate. This situation results in an even steeper lapse laps rate in the layer after rising up and is called **convective instability**. 
+
+```{r Lifting2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure315.png'))
+```
+
+## Cloud development
+
+There are **four main types** of cloud formation: **convective, orographic, convergence, frontal cloud formation**. The principle is the same for all types: air rises and cools down until it reaches the dewpoint temperature. At that moment condensation and cloud formation takes place. Each of the four types of cloud formation takes place at a difference scale. Convective cloud formation happens on the local scale of about 5 km while orographic cloud formation happens on a scale of a few 100 km. Convergence cloud formation happens on a large scale of typically 500 km, while frontal cloud formation happens at a continental scale of 1500 km. In this chapter we discuss the convective and orographic cloud formations. The other two types will be discussed in later chapters.  
+
+
+```{r Cloud, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure316.png'))
+```
+
+### Convective cloud formation
+
+The figure below summarises convective cloud formation quite nicely. Convective cloud formation typically happens on a nice sunny afternoon in a patchy landscape with different land covers. On certain spots (like a dark ploughed field) there will be more radiation absorption than on other spots. There will be local preferential heating of the surface resulting in local heat bubbles at the surface. This **thermal** bubble can break free from the surface at the **level of free convection**. Subsequently, this hot air bubble will rise and its temperature will decrease (dry adiabatic lapse rate) till the dew point temperature (which decreases with 2°C per km) is reached at the **condensation level**. The dewpoint has a lapse rate too, because higher up in the atmosphere pressure is lower, air is less dense and it becomes more ‘difficult’ for water vapour to condensate, so we need to cool down further to reach condensation.
+
+Above the condensation level, there is formation of water droplets (condensation) and the air keeps rising but in a different way and the temperature will decrease at a different rate (moist adiabatic rate). There is a continuous supply of warm air to the base of the cumulus cloud and there is a continuous expansion at the top of the cumulus cloud. This expansion is driven by the energy released during condensation. A cumulus cloud is characterised by a flat base (at condensation level) and a cauliflower top.
+
+```{r ConvectiveCloud, fig.cap='Caption', out.width='100%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure317.png'))
+```
+
+Cumulus clouds are formed by the rising air above different preferential spots. But because the sun shines on these cumulus clouds there will be evaporation at the edges of the cumulus clouds. This, in combination with the lapse rate, slows down the further expansion of the cumulus clouds. This evaporation actually cools down the air at the edges of the cloud resulting in the sinking of this cooler, heavier air. This is the reason why there is still blue sky in between cumulus clouds. When cumulus clouds grow they also shade the surface below them, which slows down the supply of warm air, which slows down the further growing of the cloud, the cloud starts eroding and dissipating but this results in more sun on the surface again, inducing cloud formation and the cycle continues.
+
+```{r Cumulus, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure318.png'))
+```
+
+The figure below stresses the importance of the environmental lapse rate for the vertical growth of the cumulus cloud. In (a) a cumulus humilis cloud (fair weather cloud) is shown. This cloud is limited in its’ vertical growth by the stable layer above it. The cumulus congestus cloud, which is shown in (b), is a strongly developed cumulus cloud which can be several km high. (c) Shows the most extreme cumulus cloud, the cumulonimbus cloud. This cloud develops till the top of the troposphere as its’ vertical growth is limited by the permanent temperature inversion of the stratosphere. Because this cloud can’t grow further vertically, it will spread out horizontally, resulting in an anvil shaped top. So, cumulonimbus clouds are formed under very unstable conditions while cumulus humilis clouds are formed under rather stable condition (e.g. in high-pressure zones).
+
+```{r Cumulus2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure319.png'))
+```
+
+**Entrainment** is an additional process which takes place and stops the development of the cumulus cloud (besides the environmental lapse rate and the evaporation at the edges). Entrainment is the process of mixing of the saturated air in the cloud with the dry air around the cloud’s periphery. This results in a stronger cooling within the cloud and a changing of the environmental lapse rate towards more stable conditions. 
+
+The height of the base of cumulus clouds can be determined quite easily with this formula:
+
+\begin{equation} 
+   H_{meter} = 125 \left(T - T_d \right)
+   (\#eq:EqHcloud)
+\end{equation}
+
+This formula is based on the fact that clouds form where the dry adiabatic rate intersects with the dew point. So, where the air bubble reaches the condensation level. Therefore, if you know the dewpoint and the air temperature at the surface, you can calculate the height of the cumulus cloud base.
+
+```{r Hmeter, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure320.png'))
+```
+
+### Orographic cloud formation
+
+**Orographic cloud formation** is cloud formation due to topography. In this case, wind pushes up a mass of air over a mountainside. On the **windward** and **leeward side of a mountain** there’s typically different conditions due to cloud formation at the windward side. A mass of air of for example 20°C rises at the windward side and starts to cool off till it reaches its dew point temperature of 10°C at 1 km high. From this point, the temperature will decrease with the wet adiabatic rate. Because rain falls from the clouds the dew point temperature (which is equal to the air temperature) will decrease faster as less moisture is present in the air. Once the top is reached and the air starts to descend at the leeward side the air starts to warm again according to the dry adiabatic rate (because all moisture fell from the cloud as rain). Therefore, at the leeward side it barely rains (**rain shadow**) and the air will be warmer than the original air. The energy which is needed to have warmer air at the leeward side comes from the condensation energy released during cloud formation at the windward side. The dry, warm wind at the leeward side is called the **Föhn** in the Alpes and the **Chinook** in the Rocky Mountains. The type of clouds which are formed during orographic cloud formation depend on the local air conditions (stability and humidity). This process also influences vegetation. At the windward side, where it is more humid, trees can grow higher on the mountain (higher tree line) compared to the leeward side.
+
+```{r Orographic, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure321.png'))
+```
+
+A very specific type of cloud formation is the formation of **lenticular clouds**. Lenticular clouds are also formed above mountains but under very specific conditions where there is an alternation between dry and wet air layers. These clouds are also called **standing wave clouds** or altocumulus standing lenticulars. These are altocumulus clouds which visually seem as if they are standing still above a mountain or a zone behind a mountain. But actually, it is a very dynamic system where the clouds are continuously formed at one side and eroded at the other side. This is the result of the dry and wet air layers but also due to the topography which induces a wavy wind pattern. In a moist air layer, when the air rises in one of the waves the air condenses and there is cloud formation. But when it sinks again, there’s evaporation and the cloud erodes. There can be heaps of lenticular clouds above each other, but separated from each other by dry air layers. Rotor clouds are a very specific type of clouds which are very turbulent and can be found just behind a mountain under the lenticular clouds. Because of the high turbulence in these clouds there have been accidents with helicopters and airplanes which have flown into these clouds.
+
+```{r Orographic2, fig.cap='Caption', out.width='70%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure322.png'))
+```
+
+
+```{r Orographic3, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure323.png'))
+```
+
+
+## Precipitation processes and types 
+
+### Definition precipitation
+
+
+**Precipitation** is any form of water (liquid or solid) that falls from a cloud and reaches the ground. So, technically, water droplets which fall from clouds but evaporate before they reach the ground don’t fall under this definition of precipitation. But we will also discuss this type of “precipitation” during this chapter. 
+
+Precipitation (water that reaches the earth surface) is measured with a pluviometer. In Belgium there is approximately 700 to 800 mm of precipitation per year while in the tropics this is could be 2500 to 3000 mm per year and in the most extreme cases (e.g. specific region in Cameroon and India) it can be up to 11000 mm per year.
+
+A **cloud droplet** is very small (20 µm), light and in suspension in the atmosphere. These cloud droplets were formed on **condensation nuclei** which are even smaller (0.2 µm). However, a rain droplet (2000 µm) is a lot larger than a cloud droplet. Thus, before a cloud droplet increases two orders of magnitude in size (and produces rain) a lot has to happen. However, through condensation alone it would take days before a cloud droplet becomes a rain droplet. So other processes are at play.
+
+```{r clouddroplet, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure324.png'))
+```
+
+
+Before we can understand the evolution from a cloud droplet to a rain droplet we need to understand the **curvature effect**. The curvature effect describes the fact that convex surfaces (such as cloud droplets) need a greater vapor pressure to be in equilibrium. Water molecules will evaporate more easily from a curved water surface. The figure below gives the diameter of a droplet in relation to the relative humidity needed to be in equilibrium. Smaller droplets need a more saturated environment to be stable. These small droplets actually need a **supersaturated environment** (relative humidity higher than 100%). When the relative humidity of the air is above the blue line the droplets will grow while if it is under the blue line the droplet will shrink further.
+
+```{r clouddroplet2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure325.png'))
+```
+
+```{r clouddroplet3, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure326.png'))
+```
+
+The condensation nuclei on which water condenses can be **hygroscopic** (for example salt particles). These nuclei attract water and make it easier to condense and form a droplet. Moreover, the more salt in the water, the lower the water vapour pressure has to be to be in equilibrium (solute effect). 
+
+Two processes, other than condensation, are responsible for precipitation formation. 
+
+
+### Collision and coalescence process
+
+The first process is the **collision and coalescence process** where larger droplets in a cloud will mix with small droplets in a cloud. This process is mainly present in warm clouds where the temperature is above freezing temperature. In such convective clouds, a large cloud droplet will due to an updraft rise and fall. In this way the large droplet will collide with the smaller droplets and will slowly grow into a raindrop. This process will mainly take place in warm clouds which have a mixture of small and large droplets. When there are only small droplets available, this process won’t take place much.
+
+```{r Collision, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure327.png'))
+```
+
+```{r Collision2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure328.png'))
+```
+
+### Ice crystal (Bergeron) process
+
+The second process is the **ice crystal or Bergeron process**. This process takes place in mixed clouds, clouds which are consist of both ice crystals and water droplets. Ice is formed around ice nuclei of which there are only a small number available in the atmosphere (compared to ‘regualer’ condensation nuclei). For example, the cumulonimbus cloud (figure below) consist of only water at the base, only ice crystals at the top and a mixture of ice and super cooled water droplets in between. The Bergeron process happens in this middle area.
+
+```{r Bergeron, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure329.png'))
+```
+
+The process is based on the principle that the water vapour pressure to be in equilibrium in the air around ice crystals is lower than around water droplets. So, the concentration of water molecules will be lower around an ice crystal than around a water droplet. This is because evaporation from an ice crystal is a lot slower (more difficult) than from a water droplet. So, the compensating condensation flux is also lower for an ice crystal. Because of this, there is a concentration gradient between the air surrounding ice crystals and the air surrounding water droplets and water molecules will **diffuse** from the water droplet (which shrinks) to the ice crystal which can grow due to contact freezing. The Bergeron process, which depends on this diffusion process, depends on the temperature. The Figure below shows the optimum temperature at which the vapor pressure difference between water droplet and ice crystals is highest. If the temperature is higher or lower the Bergeron process will be slower.
+
+```{r Bergeron2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure330.png'))
+```
+
+```{r Bergeron3, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure331.png'))
+```
+
+```{r Bergeron4, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure332.png'))
+```
+
+Once the ice crystals have grown, different processes can take place (Figure below). Typically, the **snow pellets** (larger ice crystals) will fall and grow due to contact freezing (**accretion**). Often the ice particles will collide and **fracture** into many (tiny) secondary ice crystals. When these particles collide again and stick to each other (aggregation) **snowflakes** are produced. A lot of precipitation will start with snow formation and will for example melt and will reach the earth as rain. 
+
+```{r Bergeron5, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure333.png'))
+```
+
+**Cloud seeding** is the process where ice particles or other particles are injected into clouds to induce precipitation through the Bergeron process. This cloud seeding process can be natural when for example a large nimbostratus cloud receives ice crystals from cirrus clouds above. In the regions where there are cirrus clouds above it, there will be precipitation while in the regions where there aren’t there will be no precipitation from the nimbostratus cloud. The cloud seeding process can also be artificial when people for example inject dry ice (solid CO2) or AgI (same structure as ice crystals) into clouds from a plane to induce rain.
+
+```{r Seeding, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure334.png'))
+```
+
+The figure below shows how ice crystals can be at the basis of precipitation formation but this can be a chain of reactions and depending on the type of cloud it will result in a different type of precipitation. For example, in a nimbostratus cloud (thick cloud with low amount of liquid water), ice crystals will grow, aggregate and form snowflakes which can melt and form rain when it is warm, or which can produce snow when it is cold. In contrast, in a cumulonimbus cloud (high amount of liquid water) ice crystals will grow through accretion to rimed crystals which will further grow to rimed crystals, which will melt and form rain when it’s warm or will produce hail when it’s cold.  
+
+```{r Seeding2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure335.png'))
+```
+
+### Precipitation types
+
+Rain drops will never take that typical raindrop shape shown in the Figure below (1). When raindrops are small (<2mm) they will be round like (2) and when they are large (>2mm) they will look like (3) due to the air resistance. When rain droplets are smaller than 0.5 mm we talk about drizzle while when rain droplets are larger than 0.5 mm it is called rain.
+
+```{r RainDrop, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure336.png'))
+```
+
+**Virga** is rain that falls from clouds but evaporates before it can reach the earth surface due to the sun or the because it is warm. When the sun is low virga is most visible due to an optical effect which shows the contrast between the virga and the cloud itself. **Fall streaks** are dangling white streamers of ice crystals.
+
+```{r Virga, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure337.png'))
+```
+
+```{r Virga2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure338.png'))
+```
+
+The type of precipitation that reaches the earth surface will often depend on the temperature profile of the air. For example, snow flakes which fall from a nimbostratus cloud can stay frozen and reach the surface as snow but they will often melt to rain drops. These rain drops can stay raindrops when the temperature stays above freezing. However, when these raindrops freeze again before they reach the surface due to a deep freezing layer, it is called **sleet**. When these raindrops pass through a shallow freezing layer but don’t have the time to freeze, it is called **freezing rain** which freezes when it comes into contact with the earth surface.
+
+```{r Sleet, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure339.png'))
+```
+
+```{r Sleet2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure340.png'))
+```
+
+```{r Sleet3, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure341.png'))
+```
+
+```{r Sleet4, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure342.png'))
+```
+
+```{r Sleet5, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure343.png'))
+```
+
+**Snow pellets** and flakes are produced when the temperature profile doesn’t go above freezing. There are a lot of snow flake variations (rimed snowflakes, graupel, etc.).
+
+```{r Pellets, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure344.png'))
+```
+
+```{r Pellets2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure345.png'))
+```
+
+```{r Pellets3, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure346.png'))
+```
+
+**Hail stones** are the largest type of precipitation, they can form the largest particles. Hail stones are only produced from cumulonimbus clouds, when there is a storm. Hail stones are balls of ice formed in the cloud. Due to updrafts and downdrafts a hailstone embryo will rise and fall several times and grow into a hail stone due to contact freezing (layer ice over layer ice). At a certain point the hail stone will be heavy enough to fall from the cloud. However, stronger convective currents can keep the hailstone in the cloud for a longer time, and thus produce larger hailstones. Extreme convection, which mostly occurs during the summer, can produce hail stones with the size of a golf or even a tennis ball. 
+
+```{r Hail, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure347.png'))
+```
+
+```{r Hail2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure348.png'))
+```
+
+### Precipitation measurements
+
+Basic precipitation measurements were done in the past using a measuring cup. Nowadays, there are automatic systems to measure precipitation such as the tipping bucket system, these systems also allow to measure precipitation intensity (which is not possible with a manual measuring cup that is only emptied twice a day). Precipitation observation are also often done with radar, which is an active remote sensing technique. Radar sends out waves which are bounced back by larger precipitation particles, such as water droplets, ice, snowflakes, etc. In this way we observe not clouds but precipitation.
+
+```{r Precipmeas, fig.cap='Caption', out.width='50%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure349.png'))
+```
+
+```{r Precipmeas2, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure350.png'))
+```
+
+```{r Precipmeas3, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure351.png'))
+```
+
+```{r Precipmeas4, fig.cap='Caption', out.width='90%', fig.asp=.75, fig.align='center',echo=FALSE,fig.show='hold'}
+knitr::include_graphics(c('figures/Figure352.png'))
+```

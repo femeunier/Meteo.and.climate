@@ -1,9 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
-
 # Fronts and Weather Maps {#WFM}
 \chaptermark{WFM}
 
@@ -32,7 +26,7 @@ Each of the two divisions is then subdivided based upon the temperature content 
 Putting both designations together, we have, for example, a "continental arctic" air mass designated by 'cA', which source is over the poles and therefore very cold and dry. Continental polar (cP) is not as cold as the Arctic air mass but is also very dry. Maritime polar (mP) is also cold but moist due to its origination over the oceans. The desert region air masses (hot and dry) are designated by 'cT' for 'continental tropical'.
 
 
-```{r Fig611, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig611, fig.cap='Figure caption',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure611.png'))
 ```
 
@@ -44,7 +38,7 @@ Sometimes a third letter is added to the classification: a 'k' or a 'w' if the a
 
 #### North America
 
-```{r Fig612a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig612a, fig.cap='Figure caption',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure612a.png'))
 ```
 
@@ -59,7 +53,7 @@ knitr::include_graphics(c('figures/Figure612a.png'))
 The Figure below puts the UK central, but the same air masses are of influence in Belgium or Western Europe in general. There are three main differences with North America: (1) in Europe arctic maritime air (mA) plays a role (which is not the case in North America, (2) continental arctic air masses are less important, and (3) East-West oriented mountain barriers (Alps/Pyrenees) make incoming tropical continental air (cT) rather exceptional in Belgium and neighbouring countries. 
 The weather that air masses bring to Belgium is depending on the season. A good example is that the (exceptional) continental polar air we get in Belgium brings dry and cold weather in winter, while it brings dry and hot weather summer.
 
-```{r Fig612b, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig612b, fig.cap='Figure caption',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure612b.png'))
 ```
 
@@ -77,7 +71,7 @@ knitr::include_graphics(c('figures/Figure612b.png'))
 A long, narrow, and transient corridor of strong horizontal water vapour transport that is typically associated with a low-level jet stream ahead of the cold front of an extratropical cyclone. The water vapour in atmospheric rivers is supplied by tropical and/or extratropical moisture sources. 
 Atmospheric rivers frequently lead to heavy precipitation where they are forced upward—for example, by mountains or by an ascent in the warm conveyor belt. Horizontal water vapour transport in the midlatitudes occurs primarily in atmospheric rivers and is focused in the lower troposphere. Atmospheric rivers are the largest "rivers" of freshwater on Earth, transporting on average more than double the flow of the Amazon River.
 
-```{r Fig613, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig613, fig.cap='Figure caption',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure613.png'))
 ```
 ***Video suggestion:*** https://www.noaa.gov/stories/what-are-atmospheric-rivers
@@ -95,7 +89,7 @@ knitr::include_graphics(c('figures/Figure613.png'))
 A ***weather front*** is a boundary between two air masses, which often have contrasting properties.
 Across a front, there can be large temperature variations, as warm air comes into contact with cooler air. The temperature difference can indicate the 'strength' of a front. If very cold air comes into contact with warm tropical air, for example, the front can be 'strong' or 'intense'. However, if there is little difference in temperature between the two air masses, the front may be 'weak.'
 
-```{r Fig621, fig.cap='Symbols (half circles, triangles) indicate  the direction of movement of the fronts. Green area is the area of precipitation. Each symbol with wind and temperature info is a weather station. ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig621, fig.cap='Symbols (half circles, triangles) indicate  the direction of movement of the fronts. Green area is the area of precipitation. Each symbol with wind and temperature info is a weather station. ',echo=FALSE,fig.align='center',fig.show='',out.width='80%'}
 knitr::include_graphics(c('figures/Figure621.png'))
 ```
 
@@ -106,7 +100,7 @@ knitr::include_graphics(c('figures/Figure621.png'))
 A stationary front forms when a cold front or warm front stops moving. This happens when two masses of air are pushing against each other, but neither is powerful enough to move the other. Winds blowing parallel to the front instead of perpendicular can help it stay in place.
 A stationary front may stay for days. If the wind direction changes, the front will start moving again, becoming either a cold or warm front. Or the front may break apart. Because a stationary front marks the boundary between two air masses, there are often differences in air temperature and wind on opposite sides of it. The weather is often cloudy along a stationary front, and rain or snow often falls, especially if the front is in an area of low atmospheric pressure.
 
-```{r Fig622, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig622, fig.cap=' ',echo=FALSE,fig.align='center',fig.show='',out.width='80%'}
 knitr::include_graphics(c('figures/Figure622.png'))
 ```
 
@@ -115,24 +109,24 @@ knitr::include_graphics(c('figures/Figure622.png'))
 A cold front forms when a cold air mass pushes into a warmer air mass. Cold fronts can produce dramatic changes in the weather. They move fast (~40 km per hour), up to twice as fast as a warm front. As a cold front moves into an area, the heavier (denser) cold air pushes under, the lighter (less dense) warm air, causing it to rise into the troposphere. Lifted warm air ahead of the front produces cumulus or cumulonimbus clouds and thunderstorms.
 As the cold front passes, winds become gusty. There is a sudden drop in temperature, and also heavy rain, sometimes with hail, thunder, and lightning. Atmospheric pressure changes from falling to rising at the front. After a cold front moves through your area, you may notice that the temperature is cooler, the rain has stopped, and the cumulus clouds are replaced by stratus and stratocumulus clouds or clear skies.
 
-```{r Fig623, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig623, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure623.png'))
 ```
 
-```{r Fig623b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig623b, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure623b.png'))
 ```
 
 The average slope of a cold-frontal surface is about 1 in 50. A cold front moves, on average, at about the speed of the geostrophic wind component normal to the front and measured at it. The passage of a cold front is normally marked at the Earth's surface by a rise of pressure, a fall of temperature and dew-point, and a veer of wind (in the northern hemisphere). Rain occurs in association with most cold fronts and may extend some 100 to 200 km ahead of or behind the front. Some cold fronts give only a shower at the front, while still others give no precipitation. Thunder, and occasionally a line squall, may occur at a cold front.
 
-```{r Fig623c, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig623c, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure623c.png'))
 ```
 
 **Frontolysis vs. Frontogenesis:**
 Frontolysis is the weakening of a front (temperature and density difference between two air masses become smaller). Frontogenesis is the strengthening of a front, for example when a cold front moves the continent to the ocean (Figure below), causing a larger difference with the warm moist air above the ocean, creating more precipitation in a squall line. 
 
-```{r Fig623d, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig623d, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure623d.png'))
 ```
 
@@ -142,18 +136,18 @@ knitr::include_graphics(c('figures/Figure623d.png'))
 A warm front forms when a warm air mass pushes into a colder air mass. Warm fronts move more slowly (~20 km per hour) than cold fronts because it is more difficult for the warm air to push the cold, dense air across the Earth's surface. Warm fronts often form on the east side of low-pressure systems where warmer air from the south is pushed north.
 You will often see high clouds like cirrus, cirrostratus, and middle clouds like altostratus ahead of a warm front. These clouds form in the warm air that is high above the cold air. As the front passes over an area, the clouds become lower, and rain is likely. There can be thunderstorms around the warm front if the air is unstable, but usually they come with moderate rain.
 
-```{r Fig624a, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig624a, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure624a.png'))
 ```
 
-```{r Fig624b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig624b, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure624b.png'))
 ```
 
 The average slope of a warm-frontal surface is about 1 in 150. A warm front moves, on average, at speed some two-thirds of the component of the geostrophic wind component normal to the front and measured at it. 
 As a warm front approaches, temperature and dew-point within the cold air gradually rise, and pressure falls at an increasing rate. Precipitation usually occurs within a broad belt some 400 km in advance of the front. Passage of the front is usually marked by a steadying of the barometer, a discontinuous rise of temperature and dew-point, a veer of wind (in the northern hemisphere), and a cessation or near cessation of precipitation. When a temperature profile is observed (weather balloon), a temperature inversion can be observed when passing the front surface (frontal inversion).
 
-```{r Fig624c, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig624c, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure624c.png'))
 ```
 
@@ -168,10 +162,10 @@ There are two types of occluded fronts:
 
 **Classic Model of a developing cold-type/ warm-type occluded front**
 
-```{r Fig624d, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig624d, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure624d.png'))
 ```
-```{r Fig624e, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig624e, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure624e.png'))
 ```
 
@@ -182,7 +176,7 @@ knitr::include_graphics(c('figures/Figure624e.png'))
 * Not called "cold" or "warm" since the isentropes (=surface of constant potential temperature) are typically aligned along with the flow.
 * Develop concurrently with upper-level jets, troughs, and tropopause folds.
 
-```{r Fig625, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig625, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure625.png'))
 ```
 
@@ -202,7 +196,7 @@ The extratropical cyclone also called wave cyclone, or midlatitude cyclone is a 
 
 The polar front theory, also known as the Norwegian model, states that cyclones have a reasonably predictable, six-stage life cycle. It all begins along the polar front at 60-65 degrees north, where two very different air masses with different densities meet. Clockwise rotation along with the polar high air mass (cold, dense air) and the subtropical high air mass (warm, less dense air) causes air to flow parallel to each other along the polar front but in opposite directions. Where these two different air masses meet is called a **stationary front**, and cyclogenesis (formating a mid-latitude cyclone) has begun (**birth**).
 
-```{r Fig631, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig631, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure631.png'))
 ```
 
@@ -230,7 +224,7 @@ However, this also marks the end of midlatitude cyclone's life cycle. Once the w
 
 The hemispheric weather patterns are governed by mid-latitude (23.5°N/S to 66.5°N/S) westerly winds which move in large wavy patterns. Known as planetary waves, these longwaves are also called Rossby waves, named after Carl Rossby who discovered them in the 1930s.
 
-```{r Fig632a, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig632a, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure632a.png'))
 ```
 
@@ -244,7 +238,7 @@ Their slow-motion often results in reasonably long persistent weather patterns. 
 A "piece of energy", "vort max" (or "vorticity maximum"), "pocket of cold air" (or "pocket of energy"), "upper-level disturbance", "upper-level energy", or just "shortwave" are some of the slang terms for waves with a length of fewer than 6,000 km.
 They are embedded within the longwaves. Unlike the slow movement of longwaves, shortwaves move east (downstream) on average of 37 km/h in summer and 55 km/h in winter. This motion causes longwaves to distort and change shape such as deepening longwave troughs and flattening longwave ridges. Due to their variety of sizes, it can be challenging to discern shortwave embedded within a longwave by looking at a static map. One often needs to see looping images of the wave patterns to determine the difference between them.
 
-```{r Fig632b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig632b, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure632b.png'))
 ```
 
@@ -255,7 +249,7 @@ knitr::include_graphics(c('figures/Figure632b.png'))
 H and L pressure zones have a complex 3D shape. If they would form a perfect vertical column, parallel gradient winds aloft, then a low-pressure zone would dissipate itself due to convergence of air at the surface, increasing the pressure. Also, a H pressure zone would dissipate due to divergence near the surface. However, the complex 3D structure causes divergence and convergence aloft, which is very important to maintain and strengthen H and L pressure zones. 
 The divergence at higher altitudes can have a strengthening effect on low-pressure zones near the surface; the air is "sucked up" vertically. Divergence at higher altitudes is created by diverging isobars/contour lines. 
 
-```{r Fig633a, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig633a, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure633a.png'))
 ```
 
@@ -265,7 +259,7 @@ In the initial stage of development, a weak low-level temperature wave is seen t
 As the upper-level wave amplifies positive differential vorticity advection downstream of the upper-level trough forces ascent above the surface cyclone. The resulting lower-tropospheric vortex stretching intensifies the surface cyclone. Increased low-level wind speeds lead to an amplification of the low-level temperature wave and hence stronger low-level temperature advection which in turn amplifies the upper-level wave. Therefore, positive feedback between the processes occurring at upper and lower-levels occurs.
 As the cyclone develops, the upper-level low-pressure region moves towards the surface low. In the mature stage, the upper-level low is located directly above the surface low, producing a vertically stacked cold-core system. The alignment of the surface and upper-level cyclones means that there is no longer a positive feedback effect between the processes occurring at upper and lower-levels and the cyclone decays (not shown).
 
-```{r Fig633b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig633b, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure633b.png'))
 ```
 
@@ -273,13 +267,15 @@ knitr::include_graphics(c('figures/Figure633b.png'))
 
 A jet stream has formed in the trough of the upper-level height contours, where the pressure gradient is tight. The developing surface cyclone is located below an area of **strong divergence**.
 
-```{r Fig633c, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig633c, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure633c.png'))
 ```
 
 **Conveyor Belt**
 
-```{r Fig633d, fig.cap='Horizontal composites at the time of maximum intensity. (a) Pressure on 285 K isentropic surface (solid, at 900, 800, 700 and 600 hPa); system relative wind vectors on 285 K isentropic surface; mid-level cloud cover, MCC (filled, >50%); overlaid with surface fronts. Bold green dashed arrow indicates cold conveyor belt flow. (b) Pressure on 300 K isentropic surface (solid, at 700, 600, 500 and 400hPa); system relative wind vectors on 300 K isentropic surface; high-level cloud cover, HCC (filled, >50%); overlaid with surface fronts. Bold arrows indicate warm conveyor belt flows (WCB1, solid black, and WCB2, dashed black) and dry intrusion (solid green). (c) Vertical cross-section along the warm conveyor belt transect. Contours are system relative u-component of the wind (solid, at -35, -30 and -25 ms-1); θe (dashed contours, between 270 and 320 K), vertical velocity (dotted contours, at -0.6, -0.5, -0.4 and -0.3 hPa s-1); relative humidity, RH (filled, >55%).',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+Figure description: Horizontal composites at the time of maximum intensity. (a) Pressure on 285 K isentropic surface (solid, at 900, 800, 700 and 600 hPa); system relative wind vectors on 285 K isentropic surface; mid-level cloud cover, MCC (filled, >50%); overlaid with surface fronts. Bold green dashed arrow indicates cold conveyor belt flow. (b) Pressure on 300 K isentropic surface (solid, at 700, 600, 500 and 400hPa); system relative wind vectors on 300 K isentropic surface; high-level cloud cover, HCC (filled, >50%); overlaid with surface fronts. Bold arrows indicate warm conveyor belt flows (WCB1, solid black, and WCB2, dashed black) and dry intrusion (solid green). (c) Vertical cross-section along the warm conveyor belt transect. Contours are system relative u-component of the wind (solid, at -35, -30 and -25 ms-1); θe (dashed contours, between 270 and 320 K), vertical velocity (dotted contours, at -0.6, -0.5, -0.4 and -0.3 hPa s-1); relative humidity, RH (filled, >55%).
+
+```{r Fig633d, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='100%'}
 knitr::include_graphics(c('figures/Figure633d.png'))
 ```
 
@@ -302,7 +298,7 @@ The Earth's rotation creates vorticity, which is a maximum at the poles and zero
 At the poles, this vorticity is at its maximum with the vorticity decrease as one move toward the equator. Besides, this rotation is cyclonic (counterclockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere). As a result, a parcel of air that is moving toward a pole will undergo an increase in planetary vorticity (spin faster) while air moving toward the equator will see a decrease in planetary vorticity (spin slower).
 Now, going back to the tilt of the trough, the faster a parcel moves north, the faster the vorticity increases. This helps explain why negatively tilted trough is more likely to cause the development of severe weather as compared to positively tiled troughs, where the increase in planetary vorticity is slower.
 
-```{r Fig634a, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig634a, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure634a.png'))
 ```
 
@@ -312,7 +308,7 @@ knitr::include_graphics(c('figures/Figure634a.png'))
 
 Parcels acquire relative vorticity when they encounter curved flow. For the Northern Hemisphere atmosphere, parcels of air will have cyclonic (counterclockwise) spin in troughs and anti-cyclonic (clockwise) spin in ridges.
 
-```{r Fig634b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig634b, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure634b.png'))
 ```
 
@@ -320,7 +316,7 @@ knitr::include_graphics(c('figures/Figure634b.png'))
 
 Parcels acquire relative vorticity when they encounter horizontal differences in wind speeds. For the Northern Hemisphere atmosphere, the same holds. A parcel located on the north side of the jet stream will experience increased counterclockwise flow and therefore, have increased vorticity. If that same parcel were located south of the jet stream, then the spin would be clockwise for a decrease in vorticity.
 
-```{r Fig634c, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig634c, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure634c.png'))
 ```
 
@@ -331,6 +327,6 @@ knitr::include_graphics(c('figures/Figure634c.png'))
 * The maximum vorticity occurs at the low trough in-between regions of convergence and divergence.
 * Vorticity increases in the converging region and decreases in the diverging region.
 
-```{r Fig634d, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+```{r Fig634d, fig.cap=' ',echo=FALSE,fig.show='',fig.align='center',out.width='80%'}
 knitr::include_graphics(c('figures/Figure634d.png'))
 ```
