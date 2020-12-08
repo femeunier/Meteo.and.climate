@@ -1,6 +1,6 @@
 --- 
 title: "Vegetation modelling"
-author: "Hans Verbeeck, Louise Terryn, Félicien Meunier"
+author: "Hans Verbeeck, Louise Terryn, Félicien Meunier, Wim Verbruggen, Ines dos Santos Vieira, Marc Peaucelle"
 date: "`r Sys.Date()`"
 output: pdf_document
 header-includes:
